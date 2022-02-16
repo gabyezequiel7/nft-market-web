@@ -1,0 +1,27 @@
+<div class="formC">
+  <h2 class="title">
+				REGISTRO
+ 	</h2>
+ 	<div class="form">
+    <label>Nombre</label>
+    <input type="text" [(ngModel)]="name" name="name" >
+    <label>Email</label>
+    <input type="email" [(ngModel)]="email"/>
+		<label>Password</label>
+		<input type="password" [(ngModel)]="password" />
+    <label>Repeat Password</label>
+		<input type="password" [(ngModel)]="repeatPassword" />
+    <div class="">
+      <span class="message-error" *ngIf="!statusError.hide">{{statusError.message}}</span>
+    </div>
+		<button type="button" (click)="signup()">Registrase</button>
+ 	</div>
+ 	<div class="bottom">
+					<span>
+            Do you already have an account?
+					</span>
+					<a href="/login">
+						Login
+					</a>
+				</div>
+</div>
